@@ -79,10 +79,7 @@ def create_host(wwwdir):
 
 def install_nginx():
     print "Installing nginx/mysql if needed..."
-    os.system('sudo apt-get -y install nginx php5-fpm php5-mysql mysql-server chkconfig')
-    os.system('sudo chkconfig nginx on')
-    os.system('sudo chkconfig mysql on 2>/dev/null')
-    os.system('sudo chkconfig php5-fpm on')
+    os.system('sudo apt-get -y install nginx php5-fpm php5-mysql mysql-server')
 
 def restart_nginx():
     os.system('sudo /etc/init.d/nginx restart')
