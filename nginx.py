@@ -30,7 +30,7 @@ server {
         fastcgi_param  SCRIPT_FILENAME [WWWDIR]$fastcgi_script_name;
         include        fastcgi_params;
         if (-e $request_filename) {
-            fastcgi_pass   127.0.0.1:9000;
+            fastcgi_pass unix:/var/run/php5-fpm.sock;
         }
     }
     location / {
